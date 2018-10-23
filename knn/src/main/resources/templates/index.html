@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form enctype="multipart/form-data" action="#" th:action="@{/knn/upload}" method="post"
+              th:object="${formulario}" modelAttribute="formulario"
+              id="dataloggerForm">
+            <div class="row">
+                <div class="file-field input-field col s6 m6 l6">
+                    <div class="btn">
+                        <span>File</span>
+                        <input type="file" name="file" id="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" >
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s6 m6 l6">
+                        <input id="k" type="number" data-length="10" name="k" >
+                        <label for="k">Valor de K</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light col s12 m12 l12" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div id="arq">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
